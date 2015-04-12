@@ -1,0 +1,16 @@
+<!-- nav menu -->
+{{outlet navigation}}
+
+<div class="panel-group" id="accordion">
+	<div class="jumbotron">
+		<div class="newJumbo">
+			<p>Please select a category...</p>
+			<p>{{view Ember.Select content=categoryList value=selectedCategory class='form-control'}}</p>
+			<p>Please enter a title...</p>
+			<p>{{textarea value=newTitle cols="80" rows="1" class='input-sm form-control'}}</p>
+			<p>Please enter a description...</p>
+			<p>{{textarea value=newDescription cols="80" rows="6" class='input-sm form-control'}}</p>
+			<p><button {{action 'createNew'}} class="btn btn-primary">Create new...</button></p>
+		</div>
+	</div>
+</div>

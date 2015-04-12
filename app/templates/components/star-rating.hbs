@@ -1,0 +1,6 @@
+<!-- rate tutorial with glyphicon -->
+<ul style="padding: 0">
+  {{#each star in stars}}
+    <li {{bind-attr class=":glyphicon :wrenches :glyphicon-wrench star.empty:emptywrench:fullwrench"}} {{action click star}}></li>
+  {{/each}}
+</ul>

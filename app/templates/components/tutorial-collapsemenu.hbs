@@ -1,0 +1,49 @@
+<!-- collapsible menu with page option buttons for editing-->
+<div class="panel panel-default">
+	<a {{bind-attr href='hashHREF' data-target='hashCollapseID'}} data-toggle="collapse" class="collapsed no-decoration">
+		<div class="panel-heading">
+  		<h4 class="panel-title">{{panelTitle}}</h4>
+		</div>
+	</a>
+	<div {{bind-attr id='collapseID'}} class="panel-collapse collapse">
+		<ul class="list-group">
+			{{#if items}}
+				{{#each item in items itemViewClass="Ember.View"}}
+					<li class="list-group-item">
+						{{_view.contentIndex}}. {{item}}
+						{{#if isEditing}}
+							<span {{action 'editButtonAction' section view.contentIndex}} class="badge btn btn-primary btn-whiteborder">
+								{{editButtonLabel}}
+							</span>
+						{{/if}}
+					</li>
+				{{/each}}
+				{{#if isAdding}}
+					<li class="list-group-item">				
+						<div class='text-center'>
+							... 
+							<span {{action 'editButtonAction' section 'new'}} class="badge btn btn-primary btn-whiteborder">
+								{{editButtonLabel}}
+							</span> 
+							...
+						</div>
+					</li>				
+				{{/if}}
+			{{else}}
+				<li class="list-group-item">
+					{{#if isAdding}}
+						<div class='text-center'>
+							... 
+							<span {{action 'editButtonAction' section 'new'}} class="badge btn btn-primary btn-whiteborder">
+								{{editButtonLabel}}
+							</span> 
+							...
+						</div>					
+					{{else}}
+						Nothing here, please add something...
+					{{/if}}
+				</li>
+			{{/if}}
+		</ul>
+	</div>
+</div>

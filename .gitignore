@@ -4,10 +4,6 @@
 /dist
 /tmp
 
-# dependencies
-/node_modules
-/vendor/*
-
 # misc
 /.sass-cache
 /connect.lock

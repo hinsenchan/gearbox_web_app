@@ -1,0 +1,11 @@
+<!-- collapsible menu that wrap image carousel -->
+<div class="panel panel-default">
+	<a {{bind-attr href='hashHREF' data-target='hashCollapseID'}} data-toggle="collapse" class="collapsed no-decoration">
+		<div class="panel-heading">
+  		<h4 class="panel-title">{{panelTitle}}</h4>
+		</div>
+	</a>
+	<div {{bind-attr id='collapseID'}} class="panel-collapse collapse">
+		{{carousel}}
+	</div>
+</div>	 

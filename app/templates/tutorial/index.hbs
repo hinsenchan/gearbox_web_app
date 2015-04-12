@@ -1,0 +1,62 @@
+<!-- Tutorial Description -->
+{{tutorial-jumbotron title=tutorial.title description=tutorial.description resourceIDHash=resourceIdHash section1='title' section2='description' totalReviews=reviews.length avgRating=avgRating}}
+
+<!-- Tutorial Tools-->
+{{tutorial-collapsemenu panelTitle='From the toolbox' hashHREF=collapseToolsHref hashCollapseID='#collapseTools' collapseID='collapseTools' items=tutorial.tools isEditing=isEditing isAdding=isAdding editButtonLabel=editButtonLabel editButtonAction='editButtonAction' section='tools'}}
+
+<!-- Tutorial Parts-->
+{{tutorial-collapsemenu panelTitle='From parts and supplies' hashHREF=collapsePartsHref hashCollapseID='#collapseParts' collapseID='collapseParts' items=tutorial.parts isEditing=isEditing isAdding=isAdding editButtonLabel=editButtonLabel editButtonAction='editButtonAction' section='parts'}}
+
+<!-- Tutorial Process-->
+{{tutorial-collapsemenu panelTitle='The Process' hashHREF=collapseProcessesHref hashCollapseID='#collapseProcesses' collapseID='collapseProcesses' items=safeStringedProcesses isEditing=isEditing isAdding=isAdding editButtonLabel=editButtonLabel editButtonAction='editButtonAction' section='process'}}
+
+<!-- Tutorial Carousel-->
+{{tutorial-carousel panelTitle='Images' hashHREF=collapseImagesHref hashCollapseID='#collapseImages' collapseID='collapseImages' carousel=carousel}}
+
+<!-- Review -->
+<div class="panel panel-default">
+  <a {{bind-attr href='reviewLink'}} data-target='#reviews' data-toggle='collapse' class="collapsed no-decoration">
+    <div class="panel-heading">
+      <h4 class="panel-title">Reviews</h4>
+    </div>
+  </a>
+  <div id='reviews' class='panel-collapse collapse'>
+    <ul class="list-group">
+      <li class="list-group-item">
+        <label>Please select a rating...</label>
+        <div class='form-group'>{{star-rating starRating=0 maxStars=5 action="rateTutorial"}}</div>
+        <label>Please enter a review...</label>
+          <div class="form-group">
+            {{textarea value=reviewComment cols="80" rows="6" class='input-sm form-control'}}
+          </div>                
+        <button class="btn btn-primary" {{action 'saveReview' reviewComment}}>Submit</button>        
+      </li>
+      {{#each reviews}}
+        <li class="list-group-item">{{_view.contentIndex}}. {{comment}}</li>
+      {{/each}}
+    </ul>
+  </div>
+</div>
+
+<!-- Modal -->
+<div {{bind-attr class=modalClass}} id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel">{{modalLabel}}</h4>
+      </div>
+      <div class="modal-body">
+        {{textarea value=modalTextAreaValue col='80' rows='6' class='modal-block'}}
+      </div>
+      <div class="modal-footer">
+        {{#if imageButton}}
+        <button {{action 'imageChanges'}} type="button" class="btn btn-primary pull-left" data-dismiss="modal">
+          {{editButtonLabel}} Image
+        </button>
+        {{/if}}
+        <button {{action 'cancelChanges'}} type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        <button {{action 'saveChanges'}} type="button" class="btn btn-primary">Confirm</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<!-- collapsible navigation menu-->
+<div class="panel panel-default">
+	<a {{bind-attr href='hashCollapseID' data-target='hashCollapseID'}} data-toggle='collapse' class="collapsed no-decoration">
+  	<div class="panel-heading">
+    	<h4 class="panel-title">{{make}}</h4>
+  	</div>
+	</a>
+	<div {{bind-attr id='collapseID'}} class='panel-collapse collapse'>
+  	<ul class="list-group">
+  		{{#each value in model}}
+				<li class="list-group-item">{{value}}</li>
+			{{/each}}
+  	</ul>
+	</div>
+</div>

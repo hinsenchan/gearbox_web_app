@@ -1,0 +1,20 @@
+<!-- tutorial description jumbotron-->
+<div class="jumbotron">
+	<h1>{{title}}</h1>
+	<p>
+		<span>{{rating-overview totalReviews=totalReviews starRating=avgRating maxStars=5 action="handleRating"}}</span>
+	</p>	  
+	<p>
+		<a {{bind-attr href='resourceIDHash'}} data-toggle='collapse' data-target='#description' class='btn btn-primary btn-lg' role='button'>
+			Description
+		</a>
+	</p>
+
+	<div id="description" class="collapse">
+		{{#each paragraph in description}}
+  	<p>
+  		{{paragraph}}
+  	</p>
+  	{{/each}}
+	</div>
+</div>

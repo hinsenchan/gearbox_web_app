@@ -17,4 +17,17 @@ var app = new EmberApp();
 // please specify an object with the list of modules as keys
 // along with the exports of each module as its value.
 
+//app.import('vendor/firebase/firebase.js');
+//app.import('vendor/emberfire/dist/emberfire.min.js');
+
+app.import("vendor/ember-localstorage-adapter/localstorage_adapter.js");
+
+app.import('vendor/bootstrap/dist/js/bootstrap.js');
+app.import('vendor/bootstrap/dist/css/bootstrap.css');
+
+app.import('vendor/bootstrap/fonts/glyphicons-halflings-regular.eot');
+app.import('vendor/bootstrap/fonts/glyphicons-halflings-regular.svg');
+app.import('vendor/bootstrap/fonts/glyphicons-halflings-regular.ttf');
+app.import('vendor/bootstrap/fonts/glyphicons-halflings-regular.woff');
+
 module.exports = app.toTree();
