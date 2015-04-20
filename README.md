@@ -1,8 +1,12 @@
 # What is Gearbox?
 
-Gearbox is a web application that uses an open-content model which allow its community to contribute to a motorcycle repair/maintenace tutorial database. Anyone can submit a tutorial to the database. Contributors can add, edit, or remove content from existing tutorials. In addition, the community can review and rate tutorials that have been submitted from other users. This web app can be used as a template to build other types of open-content applications. Gearbox was developed with HTML, CSS, Javascript, and Firebase (Backend). It uses the Ember.js web applications framework which is based on the model-view-controller (MVC) software architectural pattern. Ember.js allows developers to create scalable web applications that are object oriented and modularized. With the help of a built-in router, it allows the application to conveniently manage its state all from a single page. The current Gearbox release utilizes the Ember.js's local storage storage adapter for development testing. If you would like to implement Firebase for a production release, just swap out the local storage adapter for the EmberFire adapter. 
+Gearbox is a web application that uses an open-content model which allow its community to contribute to a motorcycle repair/maintenace tutorial database. Anyone can submit a tutorial to the database. Contributors can add, edit, or remove content from existing tutorials. In addition, the community can review and rate tutorials that have been submitted from other users. This web app can be used as a template to build other types of open-content applications. It can functions as both a native-style mobile and desktop web application. Gearbox was developed with HTML, CSS, Javascript, and Firebase (Backend). It uses the Ember.js web applications framework which is based on the model-view-controller (MVC) software architectural pattern. Ember.js allows developers to create scalable web applications that are object oriented, has a rich object model, delcarative two-way data binding, computed properties, and auto-updated templates. Its components are modularized to ensure its maintainability, reusability, and extendability. With the help of a built-in router, it allows the application to conveniently manage its state all from a single page. The current Gearbox release utilizes the Ember.js's local storage storage adapter for development testing. If you would like to implement Firebase for a production release, just swap out the local storage adapter for the EmberFire adapter.
 
-![Gearbox Intro](https://github.com/hinsenchan/gearbox_web_app/blob/master/readme/img1_appIntro.png)
+## Mobile
+![Gearbox Mobile Collage](https://github.com/hinsenchan/gearbox_web_app/blob/master/readme/mobileCollage.png)
+
+## Desktop
+![Gearbox Desktop Collage](https://github.com/hinsenchan/gearbox_web_app/blob/master/readme/desktopCollage.png)
 
 # Application Features
 
