@@ -144,7 +144,7 @@ The deprecated ember-cli release used for this Ember app has some build error is
 * `npm install -g ember-cli@0.0.41`
 * `npm install -g bower@1.4.0`
 * `git clone` this repository
-* You will not need to run `npm install` and `bower install` since it's already included in this repository.
+* You will not need to run `npm install` or `bower install`, since it's already included in this repository.
 
 ## Running
 
