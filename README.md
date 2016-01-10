@@ -129,11 +129,22 @@ Gearbox is a web application that uses an open-content model which allow its com
 
 This README outlines the details of collaborating on this Ember application.
 
+## Dependency Issues
+
+The deprecated ember-cli release used for this Ember app has some build error issues that are caused by the release of Node v4.x.x and Ember v2.x.x. In order to simplify the build process, the npm node_modules and bower vendor dependencies are included to eliminate any other unforseen dependency issues. To get up and running, you will need the following module versions:
+
+* Node v.0.10.41
+* NPM 1.4.21
+* Ember v0.0.41
+* Bower@1.4.0
+
 ## Installation
 
+* `brew install homebrew/versions/node010`
+* `npm install -g ember-cli@0.0.41`
+* `npm install -g bower@1.4.0`
 * `git clone` this repository
-* `npm install`
-* `bower install`
+* You will not need to run `npm install` and `bower install` since it's already included in this repository.
 
 ## Running
 
